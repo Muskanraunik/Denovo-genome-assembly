@@ -1,0 +1,7 @@
+
+# Genome assembly by using SPAdes
+# Ensure that you are in the "assemble" folder of the SPAdes assembler before running the following commands.
+python3 spades.py -s /home/msc2/spades-3.15.5/SRR27883875_pass.fastq -o /home/msc2/spades-3.15.5/spades_out
+
+# Assembly evaluation by using quast
+python3 quast.py -s /home/msc2/spades-3.15.5/spades_out/contigs.fasta -r /mnt/f/MUSKAN/bowtie_index/hg38.fa 
